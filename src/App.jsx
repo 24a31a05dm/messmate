@@ -5,6 +5,8 @@ import {
 } from 'lucide-react'
 import './App.css'
 
+const logoUrl = `${import.meta.env.BASE_URL}messmate-mark.svg`
+
 const navItems = [
   ['Home', 'home'], ['How It Works', 'how-it-works'], ['Features', 'features'],
   ['Benefits', 'benefits'], ['Contact', 'contact'],
@@ -27,7 +29,7 @@ const features = [
 
 function Brand({ light = false }) {
   return <a className={`brand ${light ? 'brand-light' : ''}`} href="#home" aria-label="MessMate home">
-    <img src="/messmate-mark.svg" alt="" width="38" height="38" />
+    <img src={logoUrl} alt="" width="38" height="38" />
     <span>MessMate</span>
   </a>
 }
@@ -54,7 +56,7 @@ function DashboardScreen() {
 
 function LoginScreen() {
   return <div className="login-screen">
-    <div className="login-mark"><img src="/messmate-mark.svg" alt="" /></div>
+    <div className="login-mark"><img src={logoUrl} alt="" /></div>
     <p className="tiny-brand">messmate</p><h3>Meals, on your time.</h3>
     <p>Your campus mess companion.</p>
     <div className="login-field">College email</div><div className="login-field">Password</div>
